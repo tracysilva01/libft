@@ -1,47 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/23 16:31:56 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/24 14:05:24 by trsilva-         ###   ########.fr       */
+/*   Created: 2025/01/24 15:27:34 by trsilva-          #+#    #+#             */
+/*   Updated: 2025/01/24 15:32:14 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <string.h>
-#include "libft.h"
 
-char	*ft_strdup(const char *s)
+int ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char	*new;
-	int		i;
-
-	new = malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!new)
-		return (0);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		new[i] = s[i];
-		++i;
-	}
-	new[i] = '\0';
-	return (new);
+    size_t  i;
+    size_t  j;
+    
+    i = 0;
+    j = 0;
+    while (i < strlen(dst))
+    {
+        dst[i] = dst[i];
+        ++i;
+    }
+    while ((j < (size - 1)) && (src))
+    {
+        dst[i] = src[j];
+        ++i;
+        ++j;
+    }
+    dst[i] = '\0';
+    return(strlen(dst));
 }
 
-/*
 #include <stdio.h>
 
-int	main(void)
+int main(void)
 {
-	const char aber[15] = "buenos dias";
-	char *a;
+    int a;
+    int b;
 
-	a = ft_strdup(aber);
-	printf("%s", a);
-	free(a);
-	return (0);
-}*/
+    a = ft_strlcat("hola ", "anaaaa", 6);
+    printf("%d", a);
+    return (0);
+}

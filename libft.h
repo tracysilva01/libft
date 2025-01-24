@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:19:31 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/23 17:05:38 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/24 16:09:19 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strdup(const char *s);
 void	ft_putchar_fd(char c, int fd);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int     ft_strlcpy(char *dst, const char *src, size_t size);
 
 #endif

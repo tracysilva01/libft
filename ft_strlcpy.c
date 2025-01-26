@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 13:57:09 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/24 16:11:31 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/26 14:28:38 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int ft_strlcpy(char *dst, const char *src, size_t size)
         ++i;
     }
     dst[i] = '\0';
-    return(strlen(dst));
+    return(strlen(src));
 }
 
 /*

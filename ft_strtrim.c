@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 10:47:08 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/26 15:54:10 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/27 14:27:45 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 
-	if (!s1 || !set)
+	if (!s1 || !*s1 || !set)
 		return (0);
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	i = ft_strlen(s1);
+		//--i;
 	while (i && ft_strchr(set, s1[i]))
-		i--;
+		--i;
 	return (ft_substr(s1, 0, i + 1));
 }
 

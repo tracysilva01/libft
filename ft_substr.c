@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 10:48:26 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/26 13:12:28 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/27 13:36:13 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (!substring)
 		return (NULL);
+	if (start >= strlen(s))
+		return (NULL);
 	while (s[i] && (j < len))
 	{
 		substring[j] = s[i];
@@ -35,15 +37,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substring[j] = '\0';
 	return (substring);
 }
-/*
-#include <unistd.h>
+
+/*#include <stdio.h>
 
 int	main(void)
 {
 	char            *sub_s;
 
-	sub_s = ft_substr("buenas tardes", 2, 6);
-	write(1, sub_s, 6);
+	sub_s = ft_substr("01234", 10, 10);
+	printf("%s", sub_s);
 	free(sub_s);
 	return (0);
 }*/

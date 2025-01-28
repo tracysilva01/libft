@@ -32,5 +32,8 @@
 !ft_strnstr.c
 !ft_strtrim.c
 !ft_substr.c
+!ft_striteri.c
+!ft_strmapi.c
+!ft_split.c
 !libft.h
 !Makefile

@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:19:31 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/27 16:03:19 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/28 13:53:29 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,7 @@ int     ft_strlcat(char *dst, const char *src, size_t size);
 char    *ft_strnstr(const char *big, const char *little, size_t len);
 void    *ft_calloc(size_t nmemb, size_t size);
 char	*ft_itoa(int n);
+void    ft_striteri(char *s, void (*f)(unsigned int, char*));
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif

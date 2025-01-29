@@ -6,11 +6,11 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 12:47:20 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/26 14:49:14 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/29 13:31:57 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

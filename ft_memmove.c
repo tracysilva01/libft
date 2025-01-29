@@ -6,11 +6,11 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 11:15:40 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/22 15:20:53 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/29 13:32:13 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, void *src, size_t n)
 {

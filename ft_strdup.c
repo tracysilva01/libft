@@ -6,12 +6,10 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 16:31:56 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/24 14:05:24 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/29 13:33:07 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)

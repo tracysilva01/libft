@@ -6,11 +6,11 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 11:29:21 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/22 14:16:11 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/29 13:32:24 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *dest, int c, size_t num)
 {

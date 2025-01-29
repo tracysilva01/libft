@@ -6,11 +6,11 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 15:51:27 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/24 13:47:43 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/29 13:34:40 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

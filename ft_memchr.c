@@ -6,11 +6,11 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 11:15:29 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/22 15:30:22 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/29 13:31:48 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *ptr, int ch, size_t n)
 {

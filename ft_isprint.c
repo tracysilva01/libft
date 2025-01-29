@@ -6,9 +6,11 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 13:44:28 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/22 15:20:28 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/29 13:30:37 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

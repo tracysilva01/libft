@@ -6,11 +6,11 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 16:09:29 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/22 15:21:34 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/29 13:37:10 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
+#include "libft.h"
 
 void	*ft_bzero(void *dest, size_t num)
 {

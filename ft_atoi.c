@@ -6,9 +6,11 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 16:09:16 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/22 15:21:29 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/01/29 13:37:18 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

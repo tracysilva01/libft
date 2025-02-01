@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 13:56:16 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/01 16:10:25 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/01 17:20:53 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,13 @@ int	count_strings(char const *s, char c)
 	count = 0;
 	while (s[i])
 	{
-		if (s[i] == c && (s[i + 1] != c && s[i + 1] != '\0'))
+		if (s[i] != c)
+		{
 			++count;
+			while (s[i] && s[i] != c)
+				++i;
+		}
+		else
 		++i;
 	}
 	return (count);
@@ -83,8 +88,7 @@ char	**ft_split(char const *s, char c)
 
 
 int main() {
-    /*const char *str = "...hola.....mundo....esto....es....un....test..";*/
-    char **strings = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+    char **strings = ft_split("hello!zzzzzzzz", 'z');
     
     // Imprimir el resultado
     for (int i = 0; strings[i] != NULL; i++) {
@@ -95,8 +99,35 @@ int main() {
     free(strings);  // Liberar el array de strings
     return 0;
 }
-
-/* Reserva (utilizando malloc(3)) un array de strings
+ /*Reserva (utilizando malloc(3)) un array de strings
  resultante de separar la string ’s’ en substrings
  utilizando el caracter ’c’ como delimitador. El
  array debe terminar con un puntero NULL*/
+
+/*
+Errors found:
+For ft_split, in /home/trsilva-/francinette/tests/libft/fsoares/test_split.c:
+
+Error in test 1: ft_split("hello!", 32:' '): not enough memory allocated, needed: 7, reserved: 0
+Could not find the corresponding allocation or the pointer 0x56375d8dc8d0
+Error in test 1: ft_split("hello!", 32:' '): 
+Memory leak: 0x56375d8dc910 - 4096 bytes
+You failed to free the memory allocated at:
+Error in test 2: ft_split("xxxxxxxxhello!", 120:'x'): not enough memory allocated, needed: 7, reserved: 0
+Could not find the corresponding allocation or the pointer 0x56375d8dd920
+Error in test 3: ft_split("hello!zzzzzzzz", 122:'z'): not enough memory allocated, needed: 7, reserved: 0
+Could not find the corresponding allocation or the pointer 0x56375d8dd960
+Error in test 4: ft_split("\t\t\t\thello!\t\t\t\t", 9:'\t'): not enough memory allocated, needed: 7, reserved: 0
+Could not find the corresponding allocation or the pointer 0x56375d8dd9a0
+Error in test 7: ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", 94:'^'): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x56375d8ddaa0
+Error in test 7: ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", 94:'^'): not enough memory allocated, needed: 4, reserved: 0
+Could not find the corresponding allocation or the pointer 0x56375d8ddac0
+Error in test 7: ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", 94:'^'): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x56375d8ddae0
+Error in test 7: ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", 94:'^'): not enough memory allocated, needed: 4, reserved: 0
+Could not find the corresponding allocation or the pointer 0x56375d8ddb00
+Error in test 8: ft_split("nonempty", 0:'\0'): not enough memory allocated, needed: 9, reserved: 0
+Could not find the corresponding allocation or the pointer 0x56375d8ddae0
+
+*/

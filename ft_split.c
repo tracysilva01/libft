@@ -6,11 +6,13 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 13:56:16 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/29 15:19:10 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/01 16:10:25 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 int	count_strings(char const *s, char c)
 {
@@ -28,7 +30,7 @@ int	count_strings(char const *s, char c)
 	return (count);
 }
 
-char fill_words(char const *s, char c, int last_end)
+char *fill_words(char const *s, char c, int last_end)
 {
 	char	*word;
 	int		start;
@@ -42,26 +44,56 @@ char fill_words(char const *s, char c, int last_end)
 	while (s[i] && s[i] != c)
 		++i;
 	new_end = i;
-	word = malloc((new_end - start) * sizeof(char));
+	word = calloc((new_end - start + 1), sizeof(char));
 	if (!word)
 		return (0);
 	i = 0;
-	while (word[i]) /* or (start < end)*/
-	{ // substr
-		word[i] = s[start]; //memcpy
+	while (start < new_end)
+	{
+		word[i] = s[start];
 		++start;
+		++i;
 	}
-	word[i] = '\0';
 	return (word);
 }
-
-void	free_all(void);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**strings;
+	int		last_end;
+	int		i;
+	char	*word;
 
+	i = 0;
+	last_end = 0;
 	strings = malloc((count_strings(s, c) + 1) * sizeof(char *));
+	while ((word = fill_words(s, c, last_end)) != NULL && i < count_strings(s, c))
+	{
+		strings[i] = word;
+		while (s[last_end] && s[last_end] == c)
+        {
+            ++last_end;
+        }
+        last_end += strlen(word);
+		++i;
+	}
+	strings[i] = NULL;
+	return(strings);
+}
+
+
+int main() {
+    /*const char *str = "...hola.....mundo....esto....es....un....test..";*/
+    char **strings = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+    
+    // Imprimir el resultado
+    for (int i = 0; strings[i] != NULL; i++) {
+        printf("Palabra %d: '%s'\n", i, strings[i]);
+        free(strings[i]);  // Liberar cada palabra después de usarla
+    }
+
+    free(strings);  // Liberar el array de strings
+    return 0;
 }
 
 /* Reserva (utilizando malloc(3)) un array de strings

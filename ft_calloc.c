@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 13:12:34 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/29 13:36:57 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/01 14:55:41 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char *ptr;
+	char	*ptr;
 
 	ptr = malloc(nmemb * size);
 	if (!ptr)

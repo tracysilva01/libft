@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 10:48:26 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/29 15:53:56 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/01 14:55:27 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 	unsigned int	j;
 
-	if (!s || start >= strlen(s))
+	if (!s || start >= ft_strlen(s))
 		return (ft_calloc(1, 1));
-	substring = malloc(sizeof(char) * (strlen(s) - start + 1));
-	i = start;
-	j = 0;
+	if (len > (ft_strlen(s) - start))
+		len = ft_strlen(s) - start;
+	substring = malloc(sizeof(char) * (len + 1));
 	if (!substring)
 		return (NULL);
-	while (s[i] && (strlen(s) - start))
+	i = start;
+	j = 0;
+	while (s[i] && j < len)
 	{
 		substring[j] = s[i];
 		++i;

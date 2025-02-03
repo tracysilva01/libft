@@ -6,12 +6,11 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 10:48:26 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/01 14:55:27 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/03 18:40:36 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

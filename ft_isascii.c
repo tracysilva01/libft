@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 13:44:41 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/01/29 13:30:28 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/03 18:03:29 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,10 @@ int	ft_isascii(int c)
 	return (0);
 }
 
-/*#include <unistd.h>
+#include <stdio.h>
 
 int	main(void)
 {
-	ft_isascii('a');
-	write(1, &"\n", 1);
-	ft_isascii('Z');
-	write(1, &"\n", 1);
-	ft_isascii('1');
-	write(1, &"\n", 1);
+	printf("%d\n", ft_isascii('a'));
 	return (0);
 }
-*/

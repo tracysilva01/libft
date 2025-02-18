@@ -6,7 +6,7 @@
 #    By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/21 14:44:31 by trsilva-          #+#    #+#              #
-#    Updated: 2025/02/01 16:06:10 by trsilva-         ###   ########.fr        #
+#    Updated: 2025/02/18 23:42:30 by trsilva-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRCS =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		ft_strjoin.c ft_strlcat.c ft_strnstr.c ft_substr.c ft_strtrim.c \
 		ft_calloc.c ft_itoa.c ft_striteri.c ft_strmapi.c ft_split.c
 
-# falta añadir: SPLIT
+
 # Object files
 OBJ = $(SRCS:.c=.o)
 
